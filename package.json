@@ -34,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "date-fns-tz": "^2.0.0",
+    "uuid": "^9.0.1"
   }
 }

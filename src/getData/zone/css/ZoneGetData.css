@@ -1,0 +1,17 @@
+.gd-wrapper-zone {
+    display: flex;
+    gap: 5px;
+
+    flex-direction: column;
+}
+
+.gd-input-zone {
+    width: 159px;
+    height: 30px;
+
+    background-color: #fff;
+}
+
+.gd-input-zone-error {
+    border: 2px solid red;
+}

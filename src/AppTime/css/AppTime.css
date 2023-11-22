@@ -1,0 +1,4 @@
+.app-time-wrapper {
+    display: flex;
+    flex-direction: column;
+}

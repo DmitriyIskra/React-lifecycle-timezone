@@ -1,0 +1,14 @@
+.watches-item {
+    display: flex;
+    gap: 10px;
+
+    align-items: flex-start;
+}
+
+.watches-value {
+    height: 50px;
+}
+
+.close-item {
+    cursor: pointer;
+}

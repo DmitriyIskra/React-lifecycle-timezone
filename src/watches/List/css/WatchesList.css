@@ -1,0 +1,8 @@
+.watches-list {
+    display: flex;
+    width: 527px;
+    margin-top: 20px;
+    gap: 20px;
+
+    flex-wrap: wrap;
+}

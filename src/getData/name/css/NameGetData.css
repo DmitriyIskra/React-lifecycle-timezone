@@ -1,0 +1,13 @@
+.gd-wrapper-name {
+    display: flex;
+    gap: 5px;
+
+    flex-direction: column;
+}
+
+.gd-input-name {
+    width: 159px;
+    height: 30px;
+
+    background-color: #fff;
+}
