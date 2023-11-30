@@ -5,7 +5,7 @@ import NameGetData from '../name/NameGetData';
 import ZoneGetData from '../zone/ZoneGetData';
 import ButtonGetData from '../button/ButtonGetData';
 
-import './css/GetData.css';
+import styles from './css/GetData.module.css';
 
 // форма с input для получения данных какие часы нужны
 export default function GetData({callback}) {
@@ -33,7 +33,7 @@ export default function GetData({callback}) {
     }
 
     return (
-        <form className='get-data-form' name='getDataForm' onSubmit={onHandlerSubmit}>
+        <form className={styles['get-data-form']} name='getDataForm' onSubmit={onHandlerSubmit}>
             <NameGetData />
             <ZoneGetData data={validateZone} />
             <ButtonGetData />

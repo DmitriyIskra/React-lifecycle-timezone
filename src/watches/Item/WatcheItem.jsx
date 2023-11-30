@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './css/WatcheItem.css';
+import styles from './css/WatcheItem.module.css';
 
 export default function WatchesItem({data, callback}) {
 
@@ -31,19 +31,17 @@ export default function WatchesItem({data, callback}) {
 
   const onHandlerClick = (e) => {
     // Находим id элемента по крестику которого произошел клик
-    const parrent = e.target.closest('.watches-item');
-    const elId = parrent.id;
-
-    callback(elId);
+    const id = e.target.dataset.i;
+    callback(id);
   }
 
   return (
-    <li className='watches-item' id={data.name}>
+    <li className={styles['watches-item']} id={data.name}>
       <div>
-        <div className='watches-name'>{data.name}</div>
-        <div className='watches-value'>{`${h}:${m}:${s}`}</div>
+        <div className={styles['watches-name']}>{data.name}</div>
+        <div className={styles['watches-value']}>{`${h}:${m}:${s}`}</div>
       </div>
-      <div className="close-item" onClick={onHandlerClick}>Х</div>
+      <div className={styles["close-item"]} data-i={data.name} onClick={onHandlerClick}>Х</div>
     </li>
   )
 }

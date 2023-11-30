@@ -1,12 +1,18 @@
 import React from 'react';
-import './css/NameGetData.css';
+import styles from './css/NameGetData.module.css';
 
 // Поле input для получения названия часов
 export default function NameGetData() {
   return (
-    <div className='gd-wrapper-name'>
-        <label className='gd-label-name' htmlFor="name">Название</label>
-        <input className='gd-input-name' type="text" name="name" id="gd-name" required />
+    <div className={styles['gd-wrapper-name']}>
+        <label className={styles['gd-label-name']} htmlFor="name">Название</label>
+        <input 
+        className={styles['gd-input-name']}
+        type="text" 
+        name="name" 
+        id="gd-name" 
+        placeholder='Название часов'
+        required />
     </div>
   )
 } 

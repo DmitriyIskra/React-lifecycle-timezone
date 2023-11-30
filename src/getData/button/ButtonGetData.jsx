@@ -1,11 +1,11 @@
 import React from 'react';
-import './css/ButtonGetData.css';
+import styles from './css/ButtonGetData.module.css';
 
 // Кнопка формы получения данных
 export default function ButtonGetData() {
   return (
-    <div className='gd-wrapper-button'>
-        <button className='gd-button'>Добавить</button>
+    <div className={styles['gd-wrapper-button']}>
+        <button className={styles['gd-button']}>Добавить</button>
     </div>
   )
 } 

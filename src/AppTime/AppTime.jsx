@@ -5,6 +5,8 @@ import { useState, useEffect, useRef } from 'react';
 import GetData from '../getData/wrapper/GetData';
 import WatchesList from '../watches/List/WatchesList';
 
+import styles from './css/AppTime.module.css';
+
 export default function AppTime() {
   const [TimeZones, setTimeZones] = useState([]);
   const [clocks, setClocks] = useState([]);
@@ -30,7 +32,6 @@ export default function AppTime() {
   const updateTime = () => {
     timeoutId.current = setTimeout(() => {
       setMilliseconds(new Date().getTime());
-      console.log('updateTime')
     }, 1000);
   };
 
@@ -107,7 +108,7 @@ export default function AppTime() {
 
 
   return (
-    <div className='app-time-wrapper'>
+    <div className={styles['app-time-wrapper']}>
       <GetData callback={getWatch}/>
       { clocks.length > 0 && <WatchesList
        data={clocks}
